@@ -197,7 +197,7 @@ class _SegmentedTabControlState extends State<SegmentedTabControl>
     }
     final inPercents = value / (_controller!.length - 1);
     final x = inPercents * 2 - 1;
-    return Alignment(x, 0);
+    return Alignment(x, 1);
   }
 
   TickerFuture _animateIndicatorTo(Alignment target) {
@@ -284,7 +284,7 @@ class _SegmentedTabControlState extends State<SegmentedTabControl>
                         duration: kTabScrollDuration,
                         curve: Curves.ease,
                         width: indicatorWidth,
-                        height: widget.height - widget.indicatorPadding.vertical,
+                        height: 2,
                         decoration: BoxDecoration(
                           color: indicatorColor,
                           gradient: indicatorGradient,
